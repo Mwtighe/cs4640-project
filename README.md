@@ -1,7 +1,7 @@
 # cs4640-project Jeopardy! Online Game Creator Website Project
 
 ## About Us
-Our project is a Virtual Jeopardy! Game Cretor. We hope to assist students and people of all ages in their endeavors to create their own Jeopardy! Games! 
+Our project is a Virtual Jeopardy! Game Creator. We hope to assist students and people of all ages in their endeavors to create their own Jeopardy! Games! 
 
 Contributers: Ethan Baird (ecb3ac) & Mariah Tighe (mwt9dc) 
 
