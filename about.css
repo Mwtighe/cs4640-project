@@ -18,6 +18,12 @@ body {
     width: 100%; 
 }
 
+.jumbotron {
+    position: relative; 
+    height: 100%; 
+    width: 100%; 
+}
+
 .description {
     transform: translateY(50%); 
     text-align: center; 
