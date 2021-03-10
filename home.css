@@ -35,7 +35,7 @@ body {
 
 .page-footer {
     background-color: midnightblue;
-    color: rgb(250, 250, 246);
+    color: white;
     padding: 40px 0px 20 px 0 px;
     position: static;
     height: 30px; 
@@ -45,3 +45,13 @@ body {
     text-align: center;
 }
   
+/* got the code here: https://www.w3schools.com/howto/howto_css_display_element_hover.asp */
+
+.hide {
+    display: none;
+  }
+  
+  .icons:hover + .hide {
+    display: block;
+    color: midnightblue;
+  }
