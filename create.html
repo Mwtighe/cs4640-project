@@ -47,10 +47,6 @@ body {
     text-align: center;
 }
   
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -95,6 +91,69 @@ body {
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #99b4fc;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+input[type=button] {
+  background-color: midnightblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=button]:hover {
+  background-color:rgb(16, 16, 70);
+}
   </style>
 
 <body>
@@ -131,31 +190,78 @@ body {
 <br>
 <br>
 
+
 <div class="container">
+  <input type="button" onclick="clearGame()" value="Clear">
+  <h1><strong>Create </strong></h1>
+  <br>
+  <br>
+<form id="game" action="/action_page.php">
+  <div class="row">
+  <div class="col-25">
+  <label for="title"><strong>Title</strong></label>
+  </div>
+  <div class="col-75">
+  <input type="text" id="title" name="title">
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-25">
+  <label for="description"><strong>Description</strong></label>
+  </div>
+  <div class="col-75">
+  <textarea id="description" name="description" placeholder="Write about the game you are creating..." style="height:200px"></textarea>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-25">
+  <label for="category1"><strong> Category 1 </strong></label>
+  </div>
+  <div class="col-75">
+    <input type="text" name="category1">
+    </div>
+    </div>
+  <div class="row">
+    <div class="col-25">
+    <label for="category2"><strong> Category 2 </strong></label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="category2">
+      </div>
+      </div>  
+  <div class="row">
+    <div class="col-25">
+    <label for="category3"><strong> Category 3 </strong></label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="category3">
+      </div>
+      </div>
+  <div class="row">
+    <div class="col-25">
+    <label for="category4"><strong> Category 4 </strong></label>
+    </div>
+    <div class="col-75">
+      <input type="text" name="category4">
+      </div>
+  </div>
+  <input type="button" onclick="createGame()" value="Create">
+  <br>
+  <br>
+  <br>
+</form>
 
 </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="column">
-        <div class="card"><strong>Category 1</strong></div>
-        <br>
-        </div>
-      <div class="column">
-        <div class="card"><strong>Category 2</strong></div>
-        </div>
-      <div class="column">
-        <div class="card"><strong>Category 3</strong></div>
-        </div>
-      <div class="column">
-        <div class="card"><strong>Category 4</strong></div>
-        </div>
-        </div>
-        </div>
-</div>
+<script>
+  function createGame() {
+    document.getElementById("game").submit();
+  }
+  function clearGame() {
+  document.getElementById("game").reset();
+  }
+  </script>
 
-<br>
-<br>
 <br>
 
 <footer class="page-footer">
