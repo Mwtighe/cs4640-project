@@ -1,3 +1,4 @@
+<!--this is the html file for the home page of our Jeopardy! Game Creator website-->
 <!DOCTYPE html>
 <html>
 
@@ -104,13 +105,20 @@
                     </textarea>
         </div>
         <div class="form group">
-          <input class="btn btn-primary btn-block" type="submit" value="Send" />
+          <input class="btn btn-primary btn-block" id="submitbtn" type="submit" value="Send" />
         </div>
       </div>
     </div>
   </div>
 
-  <br>
+  <!--the following JS uses an event listener to send a message to the user that their message has been sucessfully sent-->
+  <script>
+    document.getElementById("submitbtn").addEventListener("click", function() {
+      alert("Your message has been submitted! Thank you!");
+    });
+    </script>
+
+  <br> <!--line break that is a carriage return-->
 
   <!--the following sets up the page footer present on all pages of our site-->
   <!--in the future, we plan on putting this in a separate file and using php to put it on every page-->
