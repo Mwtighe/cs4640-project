@@ -200,7 +200,8 @@
   <br>
   <!-- got the below gridding code format inspiration from a w3schools sample form -->
   <div class="container">
-    <input type="button" onclick="clearGame()" value="Clear">
+    <input type="button" id="clear" onclick="clearGame()" value="Clear">
+    <p id="welcome"></p>
     <!--button that clears the form-->
     <h1><strong>Create </strong></h1>
     <br>
@@ -264,7 +265,7 @@
           <input type="text" name="category5">
         </div>
       </div>
-      <input type="button" onclick="createGame()" value="Create">
+      <input type="button" id="create" onclick="createGame()" value="Create">
       <br>
       <br>
       <br>
@@ -279,6 +280,9 @@
     function clearGame() { //clears the data in the form (allows users to restart the form)
       document.getElementById("game").reset();
     }
+    var welcome = function () { return "Welcome to the create a game form! Fill it out and click submit to create your game." }; //this is an anonymous function! :)
+    document.getElementById("welcome").innerHTML = welcome();
+
   </script>
 
   <br>
