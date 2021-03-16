@@ -1,61 +1,334 @@
 <!DOCTYPE html>
+<html>
 
-<meta name="author" content="your name">
-<meta name="description" content="include some description about your page">  
-  
-
-<!-- 3. link bootstrap -->
-<!-- if you choose to use CDN for CSS bootstrap -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="your name">
+  <meta name="description" content="include some description about your page">
 
 
-  <!-- include your CSS -->
-  <link rel="stylesheet" href="home.css" /> 
-     
+  <!-- 3. link bootstrap -->
+  <!-- if you choose to use CDN for CSS bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="home.css" />
+
   <style>
-    /*css rules*/
+    .popup-content {
+      color: white;
+      background-color: rgba(0, 4, 255);
+      margin: auto;
+      padding: 20px;
+      border: 1px solid white;
+      width: 100%;
+      height: 100%;
+      font-size: 50px;
+    }
+
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: grey;
+      text-decoration: none;
+      cursor: pointer;
+      float: right;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: 250px 250px 250px 250px 250px;
+      background-color: rgb(136, 27, 139);
+      padding: 10px;
+    }
+
+    .grid-item {
+      color: white;
+      background-color: rgba(0, 4, 255, 0.925);
+      border: 5px solid rgba(0, 0, 0, 0.8);
+      padding: 25px;
+      font-size: 15px;
+      text-align: center;
+    }
   </style>
 
+</head>
+
 <body>
-    <header>
-  <nav class="navbar navbar-expand-md navbar-dark">
-    <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">   
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>  
-        <li class="nav-item">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="browse.html">Browse</a>
-          </li>                                        
-        <li class="nav-item"> 
-          <a class="nav-link" href="create.html">Create</a>
-        </li>
-        <li class="nav-item"> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="create.html">Create</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="play.html">Play</a>
-          </li>  
-        <li class="nav-item"> 
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="profile.html">Profile</a>
-          </li>       
-      </ul>
-    </div>  
-  </nav>
-</header>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-<footer class="page-footer">
+  <br>
+  <br>
+  <br>
+
+  <div class="container" ALIGN="center">
+    <h1> Title of this game</h1>
+    <p>Created by UserName</p>
+  </div>
+  <br>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <div class="w3-card">
+        <h3>CATEGORY 1</h3>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="w3-card">
+        <h3>CATEGORY 2</h3>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="w3-card">
+        <h3>CATEGORY 3</h3>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="w3-card">
+        <h3>CATEGORY 4</h3>
+      </div>
+    </div>
+    <div class="grid-item">
+      <div class="w3-card">
+        <h3>CATEGORY 5</h3>
+      </div>
+    </div>
+    <div class="grid-item">
+      <button id="c1q1">
+        <div class="w3-card">
+          <h3>$200</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c2q1">
+        <div class="w3-card">
+          <h3>$200</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c3q1">
+        <div class="w3-card">
+          <h3>$200</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c4q1">
+        <div class="w3-card">
+          <h3>$200</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c5q1">
+        <div class="w3-card">
+          <h3>$200</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c1q2">
+        <div class="w3-card">
+          <h3>$400</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c2q2">
+        <div class="w3-card">
+          <h3>$400</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c3q2">
+        <div class="w3-card">
+          <h3>$400</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c4q2">
+        <div class="w3-card">
+          <h3>$400</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c5q2">
+        <div class="w3-card">
+          <h3>$400</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c1q3">
+        <div class="w3-card">
+          <h3>$800</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c2q3">
+        <div class="w3-card">
+          <h3>$800</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c3q3">
+        <div class="w3-card">
+          <h3>$800</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c4q3">
+        <div class="w3-card">
+          <h3>$800</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c5q3">
+        <div class="w3-card">
+          <h3>$800</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c1q4">
+        <div class="w3-card">
+          <h3>$1000</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c2q4">
+        <div class="w3-card">
+          <h3>$1000</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c3q4">
+        <div class="w3-card">
+          <h3>$1000</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c4q4">
+        <div class="w3-card">
+          <h3>$1000</h3>
+        </div>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c5q4">
+        <div class="w3-card">
+          <h3>$1000</h3>
+        </div>
+      </button>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="popup-content" ALIGN="right">
+      <span class="close">&times;</span>
+      <div class="container" ALIGN="center">
+        <p>WHAT IS THE ANSWER TO THIS QUESTION?</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("c1q1");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+      btn.style.visibility = "hidden";
+    }
+
+  </script>
+
+  <footer class="page-footer">
     <p>
-   <strong>Copyright &#169; 2021, Jeopardy! Online Game Creator. All Rights Reserved</strong>
-   </p>
-</footer>
+      <strong>Copyright &#169; 2021, Jeopardy! Online Game Creator. All Rights Reserved</strong>
+    </p>
+  </footer>
 
-<!-- CDN for JS bootstrap -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <!-- CDN for JS bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
 
 
+</body>
 
-</html> 
+</html>

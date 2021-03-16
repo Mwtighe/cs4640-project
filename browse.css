@@ -1,8 +1,10 @@
-body {
+/* this is the CSS styling code for the browse page */
+
+body { /* customizes the body of the page */
     background: rgba(255, 240, 156, 0.788); 
 }
 
-.navbar {
+.navbar { /* customizes the nav bar on the page */
     top: 0xp; 
     background: midnightblue;
     position: fixed;
@@ -18,7 +20,7 @@ body {
     width: 100%; 
 }
 
-.page-footer {
+.page-footer { /* customizes the footer of the page */
     background-color: midnightblue;
     color: rgb(250, 250, 246);
     padding: 40px 0px 20 px 0 px;
@@ -29,3 +31,39 @@ body {
     left: 0pt;
     text-align: center;
 }
+
+/* the following resource was used for the CSS code below: https://www.w3schools.com/howto/howto_js_sort_table.asp */
+
+#userInput {
+    background-image: url('http://images.clipartpanda.com/magnifying-glass-clipart-transparent-background-search-icon.svg'); /* Add a search icon to input */
+    background-size: 40px 50px; /* makes the image sized perfectly */ 
+    background-position: 5px 1px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  #browseList {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #browseList li a {
+    border: 1px solid rgb(193, 90, 253); /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: rgb(228, 180, 255); /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  #browseList li a:hover:not(.header) {
+    background-color: rgb(140, 51, 192); /* Add a hover effect to all links, except for headers */
+  }
