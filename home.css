@@ -52,8 +52,8 @@ body {
 .hide {
     display: none; /* messages are hidden until image/icon is hovered over with the user's mouse */
   }
-  
-  .icons:hover + .hide {
+
+.icons:hover + .hide { /* makes the text appear when user hovers over images */
     display: block;
     color: midnightblue;
   }

@@ -56,18 +56,18 @@
   <div class="container">
     <h1>Browse </h1>
     <!--header for the browsing page-->
+    <!--learned how to do this search feature with this site: https://www.w3schools.com/howto/howto_css_searchbar.asp-->
     <input type="text" id="userInput" onkeyup="searchFunction()" placeholder="Search for games to play..">
 
     <ul id="browseList">
       <!--makes the list items links-->
       <!--in future assignments, we aim to make these link to other users' games (the games will be playable if public)-->
+      <!--shows what the format would be-->
       <li><a href="#">Game Title by username</a></li>
       <!--dummy data inserted here-->
       <li><a href="#">American Trivia by bob123</a></li>
-
       <li><a href="#">Recent Events by sandrab</a></li>
       <li><a href="#">Friends by ally4be</a></li>
-
       <li><a href="#">Fall Semester Classes by edwin64</a></li>
       <li><a href="#">Celebrities by wanda4</a></li>
       <li><a href="#">All Things Marvel by iron_man1</a></li>
@@ -80,7 +80,6 @@
       // Declares variables
       var input, filter, ul, li, a, i, txtValue;
       input = document.getElementById('userInput');
-      filter = input.value.toUpperCase();
       ul = document.getElementById("browseList");
       li = ul.getElementsByTagName('li');
 
@@ -109,6 +108,7 @@
 
   <!-- the following code was provided by professor Upsorn -->
   <!-- CDN for JS bootstrap -->
+  <!--speeds up loading the page-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -116,16 +116,5 @@
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>
 
-
-  <script>
-    // document ready event is fired when DOM has been loaded 
-    $(document).ready(function () {
-      // do DOM manipulation, set header's height
-      $('.header').height($(window).height() / 2.5);
-    })
-  </script>
-
-
 </body>
-
 </html>

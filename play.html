@@ -19,6 +19,7 @@
   <!--the CSS styling is listed below in the html doc (not in a separate document)-->
   <!--used this resource to learn how to make modal popups: https://www.w3schools.com/howto/howto_css_modals.asp-->
   <style>
+
     .popup-content {
       color: white;
       background-color: rgba(0, 4, 255);
@@ -34,20 +35,18 @@
       /* close button customization */
       color: white;
       float: right;
-      font-size: 28px;
-      font-weight: bold;
+      font-size: 36px;
     }
 
-    .close:hover,
+    .close:hover, /* customizes the close button when the user hovers over it */
     .close:focus {
       color: grey;
-      text-decoration: none;
       cursor: pointer;
       float: right;
     }
 
     /* we learned how to do grids with this resource: https://www.w3schools.com/css/css_grid.asp */
-    .grid-container {
+    .grid-container { /* container in which the grid is located */
       display: grid;
       grid-template-columns: 250px 250px 250px 250px 250px;
       /* 5 rows in the grid */
@@ -55,7 +54,7 @@
       padding: 10px;
     }
 
-    .grid-item {
+    .grid-item { /* each grid block */
       color: white;
       background-color: rgba(0, 4, 255, 0.925);
       border: 5px solid rgba(0, 0, 0, 0.8);
@@ -111,171 +110,121 @@
   <br>
 
   <div class="grid-container">
-    <!--creates grid with cards that have jeopardy game info on it-->
+    <!--creates grid that have jeopardy game info in each square/block-->
     <div class="grid-item">
-      <div class="w3-card">
         <h3>CATEGORY 1</h3>
-      </div>
     </div>
     <div class="grid-item">
-      <div class="w3-card">
         <h3>CATEGORY 2</h3>
-      </div>
     </div>
     <div class="grid-item">
-      <div class="w3-card">
         <h3>CATEGORY 3</h3>
-      </div>
     </div>
     <div class="grid-item">
-      <div class="w3-card">
         <h3>CATEGORY 4</h3>
-      </div>
     </div>
     <div class="grid-item">
-      <div class="w3-card">
         <h3>CATEGORY 5</h3>
-      </div>
     </div>
     <div class="grid-item">
       <button id="c1q1">
         <!--the id allows the button to be referenced below in JS-->
-        <div class="w3-card">
           <h3>$200</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c2q1">
-        <div class="w3-card">
           <h3>$200</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c3q1">
-        <div class="w3-card">
           <h3>$200</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c4q1">
-        <div class="w3-card">
           <h3>$200</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c5q1">
-        <div class="w3-card">
           <h3>$200</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c1q2">
-        <div class="w3-card">
           <h3>$400</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c2q2">
-        <div class="w3-card">
           <h3>$400</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c3q2">
-        <div class="w3-card">
           <h3>$400</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c4q2">
-        <div class="w3-card">
           <h3>$400</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c5q2">
-        <div class="w3-card">
           <h3>$400</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c1q3">
-        <div class="w3-card">
           <h3>$800</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c2q3">
-        <div class="w3-card">
           <h3>$800</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c3q3">
-        <div class="w3-card">
           <h3>$800</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c4q3">
-        <div class="w3-card">
           <h3>$800</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c5q3">
-        <div class="w3-card">
           <h3>$800</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c1q4">
-        <div class="w3-card">
           <h3>$1000</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c2q4">
-        <div class="w3-card">
           <h3>$1000</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c3q4">
-        <div class="w3-card">
           <h3>$1000</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c4q4">
-        <div class="w3-card">
           <h3>$1000</h3>
-        </div>
       </button>
     </div>
     <div class="grid-item">
       <button id="c5q4">
-        <div class="w3-card">
           <h3>$1000</h3>
-        </div>
       </button>
     </div>
   </div>
@@ -296,29 +245,19 @@
     </div>
   </div>
 
-  <!--just to reiterate, got the below code structure from: https://www.w3schools.com/howto/howto_css_modals.asp-->
+  <!--just to reiterate, got the below code structure from: https://www.w3schools.com/howto/howto_css_modals.asp and edited it to fit our project-->
   <script>
-    // Get the modal
-    var modal = document.getElementById("firstPopUp");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("c1q1");
-
-    // makes an element that closes the modal
-    var close = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
+    var modal = document.getElementById("firstPopUp"); //popup modal
+    var btn = document.getElementById("c1q1"); //button that causes the popup to occur
+    var close = document.getElementsByClassName("close")[0]; //close button
+    btn.onclick = function () { //when button clicked, popup appears
       modal.style.display = "block";
     }
 
-    // When the user clicks on close button (x), the pop-up closes and the button disappears 
-    // this ensures no questions are repeated and mirrors the real game 
-    close.onclick = function () {
-      modal.style.display = "none"; //the popup goes away after the window is closed 
+    close.onclick = function () { //when the close button is clicked, the popup question disappears 
+      modal.style.display = "none"; 
       btn.style.visibility = "hidden"; // the button with the $ disappears after a question is viewed 
     }
-
   </script>
 
   <footer class="page-footer">
@@ -329,6 +268,8 @@
   </footer>
 
   <!-- CDN for JS bootstrap -->
+  <!-- speeds up pages loading-->
+  <!-- given by professor Upsorn-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -338,5 +279,4 @@
 
 
 </body>
-
 </html>
