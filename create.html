@@ -17,7 +17,8 @@
     background: rgba(255, 240, 156, 0.788);
   }
 
-  .navbar { /* customizes the nav bar */
+  .navbar {
+    /* customizes the nav bar */
     top: 0xp;
     background: midnightblue;
     position: fixed;
@@ -34,7 +35,8 @@
   }
 
 
-  .page-footer { /* customizes the footer */
+  .page-footer {
+    /* customizes the footer */
     background-color: midnightblue;
     color: white;
     padding: 40px 0px 20 px 0 px;
@@ -46,7 +48,7 @@
     text-align: center;
   }
 
-/* got the below code from this resource: https://www.w3schools.com/html/html_forms.asp (edited the code to fit our design) */
+  /* got the below code from this resource: https://www.w3schools.com/html/html_forms.asp (edited the code to fit our design) */
 
   /* Float four columns side by side */
   .column {
@@ -164,7 +166,8 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-md navbar-dark"> <!--creates the nav bar-->
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <!--creates the nav bar-->
       <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -197,11 +200,13 @@
   <br>
   <!-- got the below gridding code format inspiration from a w3schools sample form -->
   <div class="container">
-    <input type="button" onclick="clearGame()" value="Clear"> <!--button that clears the form-->
+    <input type="button" onclick="clearGame()" value="Clear">
+    <!--button that clears the form-->
     <h1><strong>Create </strong></h1>
     <br>
     <br>
-    <form id="game" action="/formsubmitted.php"> <!--goes to the formsubmitted page (does not exist yet)-->
+    <form id="game" action="/formsubmitted.php">
+      <!--goes to the formsubmitted page (does not exist yet)-->
       <div class="row">
         <div class="col-25">
           <label for="title"><strong>Title</strong></label>
@@ -278,7 +283,8 @@
 
   <br>
 
-  <footer class="page-footer"> <!--creates the footer-->
+  <footer class="page-footer">
+    <!--creates the footer-->
     <p>
       <strong>Copyright &#169; 2021, Jeopardy! Online Game Creator. All Rights Reserved</strong>
     </p>
@@ -295,4 +301,5 @@
 
 
 </body>
+
 </html>
