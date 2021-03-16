@@ -4,19 +4,17 @@
 
 <head>
   <!--Some of this code was retrieved from the code provided by Professor Upsorn-->
-    <!--the meta tag ensures proper rendering and touch zooming -->
+  <!--the meta tag ensures proper rendering and touch zooming -->
   <meta charset="UTF-8">
   <meta name="description" content="include some description about your page">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  
-  <!-- got this code from https://www.w3schools.com/howto/howto_js_slideshow.asp-->
 
   <!--the following links bootstrap and enables its usage-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-<!--the CSS styling is listed below in the html doc (not in a separate document)-->    
+  <!--the CSS styling is listed below in the html doc (not in a separate document)-->
+  <!-- got this code from https://www.w3schools.com/howto/howto_js_slideshow.asp-->
   <style>
     .mySlides {
       display: none;
@@ -44,7 +42,7 @@
       text-align: center;
     }
 
-    /* Number text (1/3 etc) */
+    /* Numbers the slides and displays the number slide that the slideshow is on */
     .numbertext {
       color: white;
       font-size: 12px;
@@ -53,7 +51,7 @@
       top: 0;
     }
 
-    /* The dots/bullets/indicators */
+    /* The dot imagery displayed at the bottom of the slideshow, indicating how many slides are in the show */
     .dot {
       height: 15px;
       width: 15px;
@@ -106,7 +104,9 @@
       text-align: center;
     }
 
-    /* Style the button that is used to open and close the collapsible content */
+    /* got the below code from https://www.w3schools.com/howto/howto_js_collapsible.asp */
+
+    /* Styles the button that is used to open and close collapsible content */
     .collapsible {
       background-color: midnightblue;
       color: white;
@@ -120,13 +120,13 @@
       margin: auto;
     }
 
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* Adds a color to the button when its clicked on or hovered over */
     .active,
     .collapsible:hover {
       background-color: rgba(62, 23, 153, 0.918);
     }
 
-    /* Style the collapsible content. Note: hidden by default */
+    /* customizes the content in the collapsible containers */
     .content {
       padding: 0 18px;
       display: none;
@@ -139,6 +139,7 @@
 <body>
 
   <header>
+    <!--customizes the nav bar-->
     <nav class="navbar navbar-expand-md navbar-dark">
       <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -175,13 +176,14 @@
     <h1><strong>About </strong></h1>
   </div>
 
+  <!-- got the below code from https://www.w3schools.com/howto/howto_js_slideshow.asp-->
   <div class="slideshow-container">
-    <!-- got this code from https://www.w3schools.com/howto/howto_js_slideshow.asp-->
 
     <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
+      <div class="numbertext">1 / 4</div> <!-- indicates the first item in the slide deck -->
       <img src="https://www.jeopardy.com/sites/default/files/styles/cta/public/2018-06/alextrebek.jpg?itok=r23l6Dqi"
         style="width:100%">
+      <!--the image inserted in the slide deck-->
     </div>
 
     <div class="mySlides">
@@ -207,6 +209,7 @@
   </div>
 
   <div style="text-align:center">
+    <!--creates the dots that go under the slide show-->
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
@@ -214,6 +217,9 @@
   </div>
 
   <br>
+
+
+  <!-- got this below JS code from https://www.w3schools.com/howto/howto_js_slideshow.asp-->
 
   <script>
     var slideIndex = 0;
@@ -233,11 +239,12 @@
       }
       slides[slideIndex - 1].style.display = "block";
       dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
+      setTimeout(showSlides, 2000); // Changes the image every 2 seconds
     }
   </script>
 
   <!-- got the below code from https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+
   <button type="button" class="collapsible"><strong>History</strong></button>
   <div class="content">
     <p>Here is the history.</p>
@@ -280,6 +287,7 @@
   <br>
 
   <footer class="page-footer">
+    <!-- creates the footer -->
     <p>
       <strong>Copyright &#169; 2021, Jeopardy! Online Game Creator. All Rights Reserved</strong>
     </p>
