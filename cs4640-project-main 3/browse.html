@@ -1,0 +1,121 @@
+<!--this is the html file for the browse page of our Jeopardy! Game Creator website-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!--the meta tag ensures proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Mariah (mwt9dc)" content="created this page">
+  <meta name="browse page" content="contains the html for the browse page">
+
+  <!--the following links bootstrap and enables its usage-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!--the CSS sytlesheet is linked below-->
+  <link rel="stylesheet" href="browse.css" />
+
+</head>
+
+<body>
+
+  <header>
+    <!--sets up the nav bar (commented more in depth in the home.html file)-->
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="browse.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="create.html">Create</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="play.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <br>
+  <br>
+  <br>
+
+  <div class="container">
+    <h1>Browse </h1>
+    <!--header for the browsing page-->
+    <!--learned how to do this search feature with this site: https://www.w3schools.com/howto/howto_css_searchbar.asp-->
+    <input type="text" id="userInput" onkeyup="searchFunction()" placeholder="Search for games to play..">
+
+    <ul id="browseList">
+      <!--makes the list items links-->
+      <!--in future assignments, we aim to make these link to other users' games (the games will be playable if public)-->
+      <!--shows what the format would be-->
+      <li><a href="#">Game Title by username</a></li>
+      <!--dummy data inserted here-->
+      <li><a href="#">American Trivia by bob123</a></li>
+      <li><a href="#">Recent Events by sandrab</a></li>
+      <li><a href="#">Friends by ally4be</a></li>
+      <li><a href="#">Fall Semester Classes by edwin64</a></li>
+      <li><a href="#">Celebrities by wanda4</a></li>
+      <li><a href="#">All Things Marvel by iron_man1</a></li>
+    </ul>
+  </div>
+
+  <!--the following resource was used for the JS code below: https://www.w3schools.com/howto/howto_js_sort_table.asp-->
+  <script>
+    function searchFunction() {
+      // Declares variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('userInput');
+      ul = document.getElementById("browseList");
+      li = ul.getElementsByTagName('li');
+
+      // Loops through all the list items (added in the HTML above), and hides those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+
+  <br>
+  <!--line break that is a carriage return-->
+
+  <footer class="page-footer">
+    <!--sets up the footer-->
+    <p>
+      <strong>Copyright &#169; 2021, Jeopardy! Online Game Creator. All Rights Reserved</strong>
+    </p>
+  </footer>
+
+  <!-- the following code was provided by professor Upsorn -->
+  <!-- CDN for JS bootstrap -->
+  <!--speeds up loading the page-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

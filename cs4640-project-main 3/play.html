@@ -1,0 +1,285 @@
+<!--this is the html file for the play page of our Jeopardy! Game Creator website-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Some of this code was retrieved from the code provided by Professor Upsorn-->
+  <!--the meta tag ensures proper rendering and touch zooming -->
+  <meta charset="UTF-8">
+  <meta name="play page" content="this is the play page for our website">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Mariah (mwt9dc)" content="created this page">
+  <meta name="Ethan (ecb3ac)" content="worked on this page">
+
+
+  <!--the following links bootstrap and enables its usage-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!--CSS home style sheet to style nav bar and footer-->
+  <link rel="stylesheet" href="home.css" />
+
+  <!--the CSS styling is listed below in the html doc (not in a separate document)-->
+  <!--used this resource to learn how to make modal popups: https://www.w3schools.com/howto/howto_css_modals.asp-->
+  <style>
+
+    .popup-content {
+      color: white;
+      background-color: rgba(0, 4, 255);
+      margin: auto;
+      padding: 20px;
+      border: 1px solid white;
+      width: 100%;
+      height: 100%;
+      font-size: 50px;
+    }
+
+    .close {
+      /* close button customization */
+      color: white;
+      float: right;
+      font-size: 36px;
+    }
+
+    .close:hover, /* customizes the close button when the user hovers over it */
+    .close:focus {
+      color: grey;
+      cursor: pointer;
+      float: right;
+    }
+
+    /* we learned how to do grids with this resource: https://www.w3schools.com/css/css_grid.asp */
+    .grid-container { /* container in which the grid is located */
+      display: grid;
+      grid-template-columns: 250px 250px 250px 250px 250px;
+      /* 5 rows in the grid */
+      background-color: rgb(136, 27, 139);
+      padding: 10px;
+    }
+
+    .grid-item { /* each grid block */
+      color: white;
+      background-color: rgba(0, 4, 255, 0.925);
+      border: 5px solid rgba(0, 0, 0, 0.8);
+      padding: 25px;
+      font-size: 15px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <!--the following sets up the nav bar that will be present on all pages-->
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <close class="navbar-toggler-icon"></close>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="browse.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="create.html">Create</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="play.html">Play</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <br>
+  <br>
+  <!--line break that is a carriage return-->
+  <br>
+
+  <div class="container" ALIGN="center">
+    <!--centers the contents of the container-->
+    <h1> Title of this game</h1>
+    <p>Created by UserName</p>
+  </div>
+  <br>
+
+  <div class="grid-container">
+    <!--creates grid that have jeopardy game info in each square/block-->
+    <div class="grid-item">
+        <h3>CATEGORY 1</h3>
+    </div>
+    <div class="grid-item">
+        <h3>CATEGORY 2</h3>
+    </div>
+    <div class="grid-item">
+        <h3>CATEGORY 3</h3>
+    </div>
+    <div class="grid-item">
+        <h3>CATEGORY 4</h3>
+    </div>
+    <div class="grid-item">
+        <h3>CATEGORY 5</h3>
+    </div>
+    <div class="grid-item">
+      <button id="c1q1">
+        <!--the id allows the button to be referenced below in JS-->
+          <h3>$200</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c2q1">
+          <h3>$200</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c3q1">
+          <h3>$200</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c4q1">
+          <h3>$200</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c5q1">
+          <h3>$200</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c1q2">
+          <h3>$400</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c2q2">
+          <h3>$400</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c3q2">
+          <h3>$400</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c4q2">
+          <h3>$400</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c5q2">
+          <h3>$400</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c1q3">
+          <h3>$800</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c2q3">
+          <h3>$800</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c3q3">
+          <h3>$800</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c4q3">
+          <h3>$800</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c5q3">
+          <h3>$800</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c1q4">
+          <h3>$1000</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c2q4">
+          <h3>$1000</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c3q4">
+          <h3>$1000</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c4q4">
+          <h3>$1000</h3>
+      </button>
+    </div>
+    <div class="grid-item">
+      <button id="c5q4">
+          <h3>$1000</h3>
+      </button>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- creation of the first popup modal -->
+  <div id="firstPopUp" class="modal">
+
+    <!-- the content of the first popup modal -->
+    <!-- this allows a window to pop up with the jeopardy question text for the first category $200 question-->
+    <!-- mirrors real televised game design -->
+    <div class="popup-content" ALIGN="right">
+      <close class="close">&times;</close>
+      <div class="container" ALIGN="center">
+        <p>WHAT IS THE ANSWER TO THIS QUESTION?</p>
+      </div>
+    </div>
+  </div>
+
+  <!--just to reiterate, got the below code structure from: https://www.w3schools.com/howto/howto_css_modals.asp and edited it to fit our project-->
+  <script>
+    var modal = document.getElementById("firstPopUp"); //popup modal
+    var btn = document.getElementById("c1q1"); //button that causes the popup to occur
+    var close = document.getElementsByClassName("close")[0]; //close button
+    btn.onclick = function () { //when button clicked, popup appears
+      modal.style.display = "block";
+    }
+
+    close.onclick = function () { //when the close button is clicked, the popup question disappears 
+      modal.style.display = "none"; 
+      btn.style.visibility = "hidden"; // the button with the $ disappears after a question is viewed 
+    }
+  </script>
+
+  <footer class="page-footer">
+    <!-- creates the footer -->
+    <p>
+      <strong>Copyright &#169; 2021, Jeopardy! Online Game Creator. All Rights Reserved</strong>
+    </p>
+  </footer>
+
+  <!-- CDN for JS bootstrap -->
+  <!-- speeds up pages loading-->
+  <!-- given by professor Upsorn-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+
+
+</body>
+</html>
