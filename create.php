@@ -151,14 +151,14 @@
     <h1><strong>Create </strong></h1>
     <br>
     <br>
-    <form action="createdform.php" method="post" id="game" autocomplete="on"> 
+    <form action="createdform.php" method="post" id="game" autocomplete="off"> 
       <!--goes to the created form page-->
       <div class="row">
         <div class="col-25">
           <label for="title"><strong>Title</strong></label>
         </div>
         <div class="col-75">
-          <input type="text" id="title" name="title">
+          <input type="text" id="title" name="title" required>
         </div>
       </div>
       <div class="row">
@@ -166,8 +166,7 @@
           <label for="description"><strong>Description</strong></label>
         </div>
         <div class="col-75">
-          <textarea id="description" name="description" placeholder="Write about the game you are creating..."
-            style="height:200px"></textarea>
+          <textarea id="description" name="description" style="height:200px" required></textarea>
         </div>
       </div>
       <div class="row">

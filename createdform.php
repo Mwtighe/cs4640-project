@@ -36,19 +36,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
     $category = array("$category1", "$category2", "$category3", "$category4", "$category5"); 
 
-    //making associative arrays with keys to help keep all the information entered organized 
-    $categories["$category1"] = "$question1, $question2, $question3, $question4";
-    $categories["$category2"] = "$question12, $question22, $question32, $question42";
-    $categories["$category3"] = "$question13, $question23, $question33, $question43";
-    $categories["$category4"] = "$question14, $question24, $question34, $question44";
-    $categories["$category5"] = "$question15, $question25, $question35, $question45";
+    //making arrays to help keep all the information entered organized 
+    $cat1ques = array("$question1, $question2, $question3, $question4");
+    $cat2ques = array("$question12, $question22, $question32, $question42");
+    $cat3ques = array("$question13, $question23, $question33, $question43");
+    $cat4ques = array("$question14, $question24, $question34, $question44");
+    $cat5ques = array("$question15, $question25, $question35, $question45");
 
-    $questions["$200"] = "$question1, $question12, $question13, $question14, $question15";
+    $questions["$200"] = "$question1", "$question12", "$question13", "$question14", "$question15";
     $questions["$400"] = "$question2, $question22, $question23, $question24, $question25";
     $questions["$800"] = "$question3, $question32, $question33, $question34, $question35";
     $questions["$1000"] = "$question4, $question42, $question43, $question44, $question45";
 
-    echo "Here are the categories you entered: <br/>"; 
+    echo "Here are the categories and questions you entered: <br/>"; 
 
     foreach ($category as $cat) 
     {   
