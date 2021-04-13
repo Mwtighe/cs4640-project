@@ -113,7 +113,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-dark">
       <!--creates the nav bar-->
-      <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
+      <a class="navbar-brand" href="home.php">Jeopardy! Online Game Creator</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -127,7 +127,7 @@
             <a class="nav-link" href="browse.html">Browse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="create.html">Create</a>
+            <a class="nav-link" href="create.php">Create</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="play.html">Play</a>
@@ -151,8 +151,8 @@
     <h1><strong>Create </strong></h1>
     <br>
     <br>
-    <form id="game" action="/formsubmitted.php">
-      <!--goes to the formsubmitted page (does not exist yet)-->
+    <form action="createdform.php" method="post" id="game" autocomplete="on"> 
+      <!--goes to the created form page-->
       <div class="row">
         <div class="col-25">
           <label for="title"><strong>Title</strong></label>
@@ -370,7 +370,7 @@
           <input type="text" name="question45">
         </div>
       </div>
-      <input type="button" id="create" onclick="createGame()" value="Create">
+      <input class="btn btn-primary btn-block" id="submitbtn" type="submit" value="Create" />
       <br>
       <br>
       <br>
@@ -379,7 +379,7 @@
   </div>
 
   <script>
-    function createGame() { //creates a game (not working yet)
+    function createGame() { //creates a game (work in progress)
       document.getElementById("game").submit();
     }
     function clearGame() { //clears the data in the form (allows users to restart the form)
