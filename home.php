@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!--this is the html file for the home page of our Jeopardy! Game Creator website-->
 <!DOCTYPE html>
 <html>
@@ -116,22 +117,24 @@
       </div>
       <div class="col-md-4">
         <h3>Contact Us!</h3>
+        <form action="contactform.php" method="post" autocomplete="on"> <!--found this html tag here https://www.w3schools.com/tags/att_input_autocomplete.asp-->
         <!--creates the contact form-->
-        <!--got this code from a POTD that Professor Upsorn provided-->
+        <!--got this code / referenced it from two POTDs that Professor Upsorn provided & this source: https://getbootstrap.com/docs/4.3/components/forms/?-->
         <div class="form-group">
-        <form action="contactform.php" method="post"><br>
-        <input class="form-control" type=text placeholder="Name" name="name" />
+        <input class="form-control" type="text" placeholder="Name" name="name" required/>
         </div>
-        <input class="form-group" type="email" placeholder="Email address" name="email" />
+        <div class="form-group">
+        <input class="form-control" input type="email" placeholder="Email address" name="email" required/>
         </div>
-        <div class="form-group" textarea class="form-control" rows="4" cols="15" name="comment"></textarea>
+        <div class="form-group">
+          <textarea class="form-control" rows="4" cols="15" name="comment" required></textarea>
           </div>
         <div class="form group">
           <input class="btn btn-primary btn-block" id="submitbtn" type="submit" value="Send" />
         </div>
         </div>
+        </div>
         </form>
-    </div>
   </div>
 
 
@@ -139,7 +142,7 @@
   <!--referenced the following resource for creating this code: https://www.w3schools.com/js/js_htmldom_eventlistener.asp-->
   <script>
     document.getElementById("submitbtn").addEventListener("click", function () {
-      alert("Your message has been submitted! Thank you!");
+      alert("Processing your submission! Please wait.");
     });
 
   </script>
