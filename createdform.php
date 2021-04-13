@@ -1,5 +1,7 @@
 <?php
 
+//created by Mariah Tighe (mwt9dc)
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     //initializing values with what the user entered 
@@ -81,5 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         echo $itemTen . "<br/>"; 
     }
+
+    echo "Game created: " . date(r) . "<br/>"; 
 
 }
