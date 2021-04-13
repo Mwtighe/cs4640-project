@@ -70,18 +70,19 @@
           <!--puts text on the jumbotron-->
           <h1>Jeopardy!</h1>
           <p>Online Game Creator</p>
-          <?php
-          function welcomeUser($uname){
-              echo "Welcome $uname!";
-          }
-          welcomeUser("Ethan"); 
-          ?>
-          <br>
         </div>
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container" ALIGN="center">
+  <?php
+          function welcomeUser($uname){ // user defined function
+              echo "Welcome $uname!"; // find username variable 
+          }
+          welcomeUser("Ethan"); 
+          ?>
+    <br> 
+    <br>
     <div class="row">
       <div class="col-md-4">
         <!--organizes the containers into smaller subsections-->
@@ -118,22 +119,21 @@
         <!--creates the contact form-->
         <!--got this code from a POTD that Professor Upsorn provided-->
         <div class="form-group">
-          <input class="form-control" type=text placeholder="Name" name="email" />
+        <form action="contactform.php" method="post"><br>
+        <input class="form-control" type=text placeholder="Name" name="name" />
         </div>
-        <div class="form-group">
-          <input type="email" placeholder="Email address" name="email" />
+        <input class="form-group" type="email" placeholder="Email address" name="email" />
         </div>
-        <div class="form-group">
-          <textarea class="form-control" rows="4">
-                        this is the content
-                    </textarea>
-        </div>
+        <div class="form-group" textarea class="form-control" rows="4" cols="15" name="comment"></textarea>
+          </div>
         <div class="form group">
           <input class="btn btn-primary btn-block" id="submitbtn" type="submit" value="Send" />
         </div>
-      </div>
+        </div>
+        </form>
     </div>
   </div>
+
 
   <!--the following JS uses an event listener to send a message to the user that their message has been sucessfully sent-->
   <!--referenced the following resource for creating this code: https://www.w3schools.com/js/js_htmldom_eventlistener.asp-->
