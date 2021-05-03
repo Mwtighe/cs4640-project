@@ -58,3 +58,7 @@ body {
     display: block;
     color: midnightblue;
   }
+
+  .error {
+    color: #FF0000;
+}

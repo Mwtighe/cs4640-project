@@ -17,13 +17,14 @@
   <link rel="stylesheet" href="browse.css" />
 
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
-<body>
+<body ng-app="">
 
   <header>
     <!--sets up the nav bar (commented more in depth in the home.html file)-->
     <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
+      <a class="navbar-brand" href="home.php">Jeopardy! Online Game Creator</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,7 +38,7 @@
             <a class="nav-link" href="browse.html">Browse</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="create.html">Create</a>
+            <a class="nav-link" href="create.php">Create</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="play.html">Play</a>
@@ -73,6 +74,71 @@
       <li><a href="#">Celebrities by wanda4</a></li>
       <li><a href="#">All Things Marvel by iron_man1</a></li>
     </ul>
+
+    <br>
+
+    <h3>What game themes are you interested in?</h3> <!--drop down menu to select themes-->
+    <select ng-model="options">
+      <option value="history">History
+      <option value="pop-culture">Pop Culture
+      <option value="music">Music
+      <option value="math">Math
+      <option value="real-games">Real Games
+      <option value="jeopardy-originals">Jeopardy! Originals
+    </select>
+    <br>
+    <br>
+    <!--the following is 2 way binding!-->
+    <div ng-switch="options"> <!--use switch here!-->
+      <div ng-switch-when="history">
+        <h2>History</h2>
+        <p>Check out these games with history themes!</p>
+        <p><a href="#">American Trivia by bob123</a></p> <!--dummy games-->
+        <p><a href="#">U.S. Presidents by georgewashin'</a></p>
+        <p><a href="#">Famous Wars by sara_gerald</a></p>
+      </div>
+      <div ng-switch-when="pop-culture">
+        <h2>Pop Culture</h2>
+        <p>Check out these games with pop culture themes!</p>
+        <p><a href="#">Everything Kardashian by lilyrose</a></p>
+        <p><a href="#">Sexiest Men Alive by marymacncheese</a></p>
+        <p><a href="#">Tik Tok by charlieD</a></p>
+        <p><a href="#">Celebrities by wanda4</a></p>
+        <p><a href="#">All Things Marvel by iron_man1</a></p>
+      </div>
+      <div ng-switch-when="music">
+        <h2>Music</h2>
+        <p>Check out these games with music themes!</p>
+        <p><a href="#"> American Idol by terryT4</a></p>
+        <p><a href="#">Make Way 4 Broadway by idina_menzel</a></p>
+      </div>
+      <div ng-switch-when="math">
+        <h2>Math</h2>
+        <p>Check out these games with mathematical themes!</p>
+        <p><a href="#"> Proofs by e=mc2</a></p>
+        <p><a href="#"> Famous Mathematicians by milesp9</a></p>
+        <p><a href="#"> Statistics by mw43</a></p>
+      </div>
+      <div ng-switch-when="real-games">
+        <h2>Real Games</h2>
+        <p>Check out these games that use real questions from Jeopardy!!</p>
+        <p><a href="#"> Spring2013 Q's by jlover268</a></p>
+        <p><a href="#"> Seasons Galore! by yoot3</a></p>
+      </div>
+      <div ng-switch-when="jeopardy-originals">
+        <h2>Jeopardy! Originals</h2>
+        <p>Check out these games that are replicas of the ones televised.</p>
+        <p><a href="#"> 2/6/2011 by mj44</a></p>
+        <p><a href="#"> 4/9/2003 by jlover268</a></p>
+      </div>
+      <div ng-switch-default>
+        <h2>Themes</h2>
+        <p>Select themes from the dropdown above! A variety of games related to the theme you select will appear after
+          you click it.</p>
+      </div>
+    </div>
+    <br>
+
   </div>
 
   <!--the following resource was used for the JS code below: https://www.w3schools.com/howto/howto_js_sort_table.asp-->
@@ -118,4 +184,5 @@
     crossorigin="anonymous"></script>
 
 </body>
+
 </html>

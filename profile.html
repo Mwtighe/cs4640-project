@@ -5,6 +5,7 @@
 <!--the meta tag ensures proper rendering and touch zooming -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="profile page" content="contains the html for the profile page">
+<meta name="Ethan (ecb3ac)" content="created this page">
 
 
 <!--the following links bootstrap and enables its usage-->
@@ -20,7 +21,7 @@
     <!--the following sets up the nav bar that will be present on all pages-->
     <!--in the future, we plan on putting this header in an html file and using php to add it to every page-->
     <nav class="navbar navbar-expand-md navbar-dark">
-      <a class="navbar-brand" href="home.html">Jeopardy! Online Game Creator</a>
+      <a class="navbar-brand" href="home.php">Jeopardy! Online Game Creator</a>
       <!--links the title in the left hand corner of the nav bar back to the home page-->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <!--makes the nav bar collapsible when the screen is not full screen or large enough to support the full horizaontal bar-->
@@ -39,7 +40,7 @@
             <!--links to the browse page-->
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="create.html">Create</a>
+            <a class="nav-link" href="create.php">Create</a>
             <!--links to the create page-->
           </li>
           <li class="nav-item">
@@ -54,6 +55,28 @@
       </div>
     </nav>
   </header>
+
+    <!--links to the about page-->
+    <div class= "container" ALIGN= "center">
+      <h2>Modal Login Form</h2>
+      <img src= https://www.kindpng.com/picc/m/22-223941_transparent-avatar-png-male-avatar-icon-transparent-png.png width="400" height="450" alt="Avatar" class="avatar">
+      <br>  
+      
+      <!--Container for Login Information Currently, Aligned Center-->
+      <div class="container" ALIGN="center">
+ 
+        <!--Input for Login Information Currently, Username-->
+        <label for="user"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="user" required>
+
+        <!--Input for Login Information Currently, Password-->
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <!--Button for Login Information Currently, Submission-->          
+        <button type="submit">Login</button>
+        <label>
+  
 
   <footer class="page-footer">
     <!--creates the footer, present on every page of our site-->
