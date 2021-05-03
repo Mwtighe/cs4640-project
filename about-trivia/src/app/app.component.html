@@ -1,7 +1,6 @@
 <!--this is the html file for the about page of our Jeopardy! Game Creator website-->
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
 <head>
   <!--Some of this code was retrieved from the code provided by Professor Upsorn-->
@@ -138,7 +137,7 @@
   </style>
 </head>
 
-<body ng-app="aboutApp" ng-controller="myCtrl">
+<body>
 
   <header>
     <!--customizes the nav bar-->
@@ -175,21 +174,8 @@
   <br>
 
   <div class="container">
-    <h1 ng-style="aboutHeader" ALIGN="center"><strong>About </strong></h1>
+    <h1><strong>{{ title }}</strong></h1>
   </div>
-
-  <!--got this styling code info from w3schools: https://www.w3schools.com/angular/tryit.asp?filename=try_ng_ng-style-->
-  <script>
-    var app = angular.module("aboutApp", []);
-    app.controller("myCtrl", function ($scope) {
-      $scope.aboutHeader = {
-        "color": "navy",
-        "background-color": "white",
-        "font-size": "60px",
-        "padding": "0px"
-      }
-    });
-  </script>
 
   <!-- got the below code from https://www.w3schools.com/howto/howto_js_slideshow.asp-->
   <div class="slideshow-container">
@@ -282,43 +268,7 @@
 
   <button type="button" class="collapsible"><strong>Trivia</strong></button>
   <div class="content">
-    <div ng-class="trivia">
-      <!--the following is event binding!-->
-      <!--- referred to this source for inspiration for this code: https://www.w3schools.com/angular/tryit.asp?filename=try_ng_ng-if-->
-      <h3>How many years was Alex Trabek the host for Jeopardy!?</h3>
-
-      <body ng-app="">
-
-        <input type="button" value="Reveal Answer" ng-click="q1 = true" ng-init="q1 = false">
-
-        <div ng-if="q1">
-          <p>36 years</p>
-        </div>
-
-        <h3>When did the first episode of Jeopardy! air?</h3>
-
-        <input type="button" value="Reveal Answer" ng-click="q2 = true" ng-init="q2 = false">
-
-        <div ng-if="q2">
-          <p>September 10th, 1984</p>
-        </div>
-
-        <h3>Who was the original host of Jeopardy!?</h3>
-
-        <input type="button" value="Reveal Answer" ng-click="q3 = true" ng-init="q3 = false">
-
-        <div ng-if="q3">
-          <p>Art Fleming</p>
-        </div>
-
-        <h3>What channel is Jeopardy! on?</h3>
-
-        <input type="button" value="Reveal Answer" ng-click="q4 = true" ng-init="q4 = false">
-
-        <div ng-if="q4">
-          <p>NBC</p>
-        </div>
-    </div>
+    <p>Trivia here.</p>
   </div>
 
   <!-- got the below code from https://www.w3schools.com/howto/howto_js_collapsible.asp-->
